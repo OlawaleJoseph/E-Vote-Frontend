@@ -1,4 +1,3 @@
-import Enzyme from 'enzyme';
 import Navbar from '../components/Navbar';
 import { shallowWrapper} from './testHelper';
 
@@ -6,7 +5,6 @@ import { shallowWrapper} from './testHelper';
 
 describe('Nav', () => {
   let wrapper = shallowWrapper(Navbar);
-
   test('Should Render without error', () => {
     expect(wrapper).toBeTruthy();
   });

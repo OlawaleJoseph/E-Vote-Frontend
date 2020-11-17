@@ -1,9 +1,12 @@
-import React, { useEffect, useState } from 'react';
+import React, { Fragment } from 'react';
 import Navbar from '../components/Navbar'
 
 const Homepage = () => {
   return (
-    <Navbar />
+    <Fragment>
+      <Navbar />
+      
+    </Fragment>
   )
 }
 
