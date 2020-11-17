@@ -1,9 +1,10 @@
-import './App.css';
+import './scss/main.scss';
+import HomePage from './containers/Homepage';
 
 function App() {
   return (
     <div className="App">
-      <h1>E-VOTE APP</h1>
+      <HomePage />
     </div>
   );
 }
