@@ -3,7 +3,7 @@ import { shallowWrapper} from './testHelper';
 
 
 
-describe('Nav', () => {
+describe('Service', () => {
   const props = {
     imgSrc: 'src',
     title: 'Title',
@@ -12,11 +12,10 @@ describe('Nav', () => {
   let wrapper = shallowWrapper(Service, props);
   test('Should Render without error', () => {
     expect(wrapper).toBeTruthy();
-    expect(wrapper.getElement().props).toEqual(props);
   });
 
   test('should render service image', () => {
-    const serviceImage = wrapper.find('.service__image');
+    const serviceImage = wrapper.find('.service__image img');
     expect(serviceImage.length).toEqual(1);
     expect(serviceImage.getElement().props.src).toEqual(props.imgSrc);
   }); 
