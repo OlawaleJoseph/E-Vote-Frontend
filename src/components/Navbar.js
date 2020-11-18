@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import Logo from '../images/logo.png';
 
 export default function Navbar() {
   const [pageScrolled, setPageScrolled] = useState(false)
@@ -17,7 +18,7 @@ export default function Navbar() {
     <header className={`header ${pageScrolled ? 'header__fixed': ''}`}>
       <nav className='header__nav'>
         <a className='header__logo' href="/">
-          <img className='header__logo_img' src="images/logo.png" alt="e-vote logo"/>
+          <img className='header__logo_img' src={Logo} alt="e-vote logo"/>
         </a>
 
         <div className="header__auth_links">

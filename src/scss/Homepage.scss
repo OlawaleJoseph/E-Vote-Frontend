@@ -1,4 +1,5 @@
 @import './mixins';
+@import './variables';
 
 .header {
   width: 100%;
@@ -25,14 +26,20 @@
 
   .btn {
     position: relative;
-    padding: 5px 10px;
-    border: 3px solid #fff;
+    padding: 10px 15px;
     margin: 0 10px;
     color: #fff;
     background-color: transparent;
-    border-radius: 20px;
     overflow: hidden;
     z-index: 1;
+
+    &:first-child {
+      background-color: $secondary-color;
+    }
+
+    &:last-child {
+      background-color: $button-color;
+    }
 
     &::before {
       content: '';
@@ -41,7 +48,6 @@
       left: -100%;
       width: 100%;
       height: 100%;
-      border-radius: 20px;
       background: linear-gradient(to left, #743ad5, #d53a9d);
       transition: all 0.5s ease-in-out;
       z-index: -1;
@@ -56,7 +62,62 @@
 .header__fixed {
   position: fixed;
   top: 0;
-  background-color: red;
+  background-color: $base-color;
   transition: all 0.5s ease-in-out;
 
+}
+
+.hero {
+  @include flex(center, center);
+
+  height: 100vh;
+  position: relative;
+  background: linear-gradient(to bottom );
+  background-color: #fff;
+}
+
+.hero__container {
+  @include flex(center, center);
+  
+  width: 80%;
+  margin: 33px auto;
+  flex-direction: column;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.hero__text {
+  font-family: Poppins, sans-serif;
+  
+  h1 {
+    font-size: 2.8em;
+    margin-bottom: .5em;
+    font-weight: 500;
+    color: $primary-color;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+  }
+
+  p {
+    color: #111;
+    font-size: 1.1em;
+    width: 80%;
+    line-height: 1.8em;
+    margin-bottom: 1.3em;
+    font-weight: 300;
+  }
+
+  .btn {
+    background-color: $button-color;
+    color: $base-color;
+    
+  }
+}
+
+
+@media (min-width: 768px) {
+  .hero__container {
+    flex-direction: row;
+  }
 }

@@ -18,7 +18,7 @@ describe('Nav', () => {
     test('should render logo', () => {
       const logo = nav.find('.header__logo_img');
       expect(logo.length).toEqual(1);
-      expect(logo.getElement().props.src).toEqual('images/logo.png');
+      expect(logo.getElement().props.src).toEqual('logo.png');
       expect(logo.getElement().props.src).not.toEqual('images/anylogo.png');
     })
 

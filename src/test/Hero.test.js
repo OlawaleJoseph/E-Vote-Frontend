@@ -9,7 +9,6 @@ describe('Hero Section', () => {
 
   test('Should Render without error', () => {
     expect(wrapper).toBeTruthy();
-    expect(wrapper).not.toBeTruthy();
   });
 
 
@@ -21,7 +20,7 @@ describe('Hero Section', () => {
 
   test('hero image section should render the correct image', () => {
     const heroImageSection = wrapper.find('.hero__img')
-    expect(heroImageSection.getElement().props.src).toEqual('images/hero_image.jpg');
+    expect(heroImageSection.getElement().props.src).toEqual('hero_image.svg');
     expect(heroImageSection.getElement().props.src).not.toEqual('images/not_hero_image.jpg');
   });
   
@@ -48,6 +47,6 @@ describe('Hero Section', () => {
     const registerBtn = textArea.find('a.btn');
     expect(registerBtn.length).toEqual(1);
     expect(registerBtn.text()).not.toBeUndefined();
-    expect(registerBtn.text()).not.toEqual('Register');
+    expect(registerBtn.text()).toEqual('Register');
   });
 })
