@@ -1,0 +1,12 @@
+@import './mixins';
+
+footer {
+  @include flex(space-between, center);
+
+  .footer__logo {
+    width: 30px;
+    height: 30px;
+  }
+
+  padding: 10px 9em;
+}

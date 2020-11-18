@@ -17,7 +17,7 @@ describe('Footer', () => {
 
     expect(logo.length).toEqual(1);
     expect(logo).not.toEqual(0);
-    expect(logo).getElement().props.src).not.toBeUndefined()
+    expect(logo.getElement().props.src).not.toBeUndefined()
   });
 
   test('should render the correct image as logo', () => {
@@ -32,6 +32,6 @@ describe('Footer', () => {
 
   test('should render h1 in hero section', () => {
     expect(copyright.text()).not.toBeUndefined();
-    expect(copyright.text()).toEqual('&c; copyright, 2020');
+    expect(copyright.text()).toEqual('© copyright, 2020.');
   });
 })
